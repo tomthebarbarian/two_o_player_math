@@ -1,7 +1,7 @@
 class Questions
   initialize
-    @question
-    @answer
+    @question = QUESTIONS[$stdin.gets.chomp][0]
+    @answer = QUESTIONS[$stdin.gets.chomp][1]
     @response
     @input
   
@@ -32,15 +32,32 @@ class Questions
     "18" => ["What is 1 + 1", "2"],
     "19" => ["What is 1 + 1", "2"],
     "20" => ["What is 1 + 1", "2"]
-}
+  }
+
+  RESPONSE = [
+    'You are correct',
+    'You are wrong'
+  ]
   # method verify checks the response against the current answer
-  def verify stin_response
-
-
+  def verify
+    if response == answer
+      puts RESPONSE[0]
+    else
+      puts RESPONSE[1]
+    end
+  
+  # Method generate_question takes in an integer number from 1 to 20
+  # and asks the question with key == to number
   def generate_question number
     puts QUESTIONS[number]
     self.response = $stdin.gets.chomp
-    verify response
+    verify
   end
 
+  # Method swap_turn takes in 2 instances of player
+  # and swithes their turn boolean variable
+  def swap_turn player1, player2
+    player1.turn=(!player1.turn)
+    player2.turn=(!player2.turn)
+  end
 end
