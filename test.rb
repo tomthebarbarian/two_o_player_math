@@ -1,7 +1,9 @@
 # # STARTUP
 # When starting up should ask for an input number to initalize questions
-
+DONE
 # When a number is input, should display a question
+
+# should display associated question, When a number is input, 
 
 # When starting up should ask the player who's turn it is to enter
 

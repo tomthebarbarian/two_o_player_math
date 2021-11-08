@@ -31,18 +31,16 @@ class Questions
   def initialize question_num
     @question = QUESTIONS[question_num][0]
     @answer = QUESTIONS[question_num][1]
-    @response
     @input
   end
-  
+
   attr_accessor 
     :question
     :answer
-    :response
     :input
 
   # method verify checks the response against the current answer
-  def verify player
+  def verify player, response
     if response == answer
       puts RESPONSE[0]
     else
@@ -55,8 +53,6 @@ class Questions
   # and asks the question with key == to number
   def generate_question number
     puts QUESTIONS[number]
-    self.response = $stdin.gets.chomp
-    verify
   end
 
   # Method swap_turn takes in 2 instances of player
