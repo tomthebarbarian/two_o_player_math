@@ -4,7 +4,7 @@ class Player
     @lives = 3
     @name = name
 
-  attr_accessor :turn, :lives
+  attr_accessor :turn, :lives, :name
 
   def turn_statement
     if (turn) 
@@ -13,7 +13,6 @@ class Player
   end
 
   def loselife
-    self.lives --
+    self.lives
   end
-
 end

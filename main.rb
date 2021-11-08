@@ -1,3 +1,3 @@
-require './player'
-require './questions'
+require './program'
 
+run_program
