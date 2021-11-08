@@ -30,7 +30,6 @@ def run_program
       puts "Not a number try again"
       redo
     end
-    puts question_select
     currQuestion = questionsA.generate_question question_select
     
     # Check Response
