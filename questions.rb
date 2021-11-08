@@ -27,7 +27,7 @@ class Questions
     'You are correct',
     'You are wrong'
   ]
-  
+
   initialize question_num
     @question = QUESTIONS[question_num][0]
     @answer = QUESTIONS[question_num][1]
@@ -41,12 +41,14 @@ class Questions
     :input
 
   # method verify checks the response against the current answer
-  def verify
+  def verify player
     if response == answer
       puts RESPONSE[0]
     else
       puts RESPONSE[1]
+      player.loselife
     end
+  end
   
   # Method generate_question takes in an integer number from 1 to 20
   # and asks the question with key == to number

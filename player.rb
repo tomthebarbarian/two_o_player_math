@@ -11,4 +11,9 @@ class Player
       puts "It's #{name}'s turn"
     end
   end
+
+  def loselife
+    self.lives --
+  end
+
 end

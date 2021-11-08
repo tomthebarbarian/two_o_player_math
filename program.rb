@@ -9,7 +9,7 @@ def run_program
   player2 = Player('Player 2')
   while player1.lives > 0 && player2.lives > 0 
     currplayer = player1.turn? player1 : player2
-    
+    currQuestion = Questions $stdin.gets.chomp
     
 
   end
