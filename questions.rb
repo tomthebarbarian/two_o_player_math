@@ -46,6 +46,7 @@ class Questions
     else
       puts RESPONSE[1]
       player.loselife
+      puts "#{player.name} loses a life"
     end
   end
   

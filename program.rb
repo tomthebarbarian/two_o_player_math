@@ -3,6 +3,11 @@ require "./player"
 require "./questions"
 # initializes the 2
 
+def status player1, player2
+  puts "#{player1.name} has #{player1.lives} lives left"
+  puts "#{player2.name} has #{player2.lives} lives left"
+end
+
 def run_program 
   # setup players and turns
   player1 = Player.new('Player 1')
@@ -25,6 +30,8 @@ def run_program
     # Check Response
     response = ($stdin.gets.chomp)
     questionsA.verify(currplayer,response)
+    
+    status(player1, player2)
     puts "Next Question"
     questionsA.swap_turn(player1,player2)
   end
