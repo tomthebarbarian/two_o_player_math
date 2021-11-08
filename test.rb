@@ -19,9 +19,15 @@ DONE
 
 ## Passing turns
 # After confirmation statement is given, should message pass turn to next player
-
+DONE
 # Should pass turn to correct player
-
+DONE
 
 ## Concluding Game
 # When a player drops to <1 lives should conclude the game and end program
+DONE
+
+## Error handling
+# Should Tolerate a non-number input
+
+# Should try again 
