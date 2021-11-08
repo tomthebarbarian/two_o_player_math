@@ -12,8 +12,3 @@ class Player
     end
   end
 end
-
-player1 = Player('Player 1')
-player1.turn = true
-
-player2 = Player('Player 2')

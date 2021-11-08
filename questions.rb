@@ -1,16 +1,5 @@
 class Questions
-  initialize
-    @question = QUESTIONS[$stdin.gets.chomp][0]
-    @answer = QUESTIONS[$stdin.gets.chomp][1]
-    @response
-    @input
   
-  attr_accessor 
-    :question
-    :answer
-    :response
-    :input
-
   QUESTIONS = {
     "1" => ["What is 1 + 1", "2"],
     "2" => ["What is 2 + 2", "4"],
@@ -38,6 +27,19 @@ class Questions
     'You are correct',
     'You are wrong'
   ]
+  
+  initialize question_num
+    @question = QUESTIONS[question_num][0]
+    @answer = QUESTIONS[question_num][1]
+    @response
+    @input
+  
+  attr_accessor 
+    :question
+    :answer
+    :response
+    :input
+
   # method verify checks the response against the current answer
   def verify
     if response == answer
