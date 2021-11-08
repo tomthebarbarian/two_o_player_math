@@ -25,16 +25,27 @@ def run_program
     puts "#{currplayer.name}'s turn"
     # Ask and generate question
     puts "Please type a number from 1 to 20 to get a question"
-    currQuestion = questionsA.generate_question $stdin.gets.chomp
+    question_select = $stdin.gets.chomp
+    if (question_select.to_i == 0)
+      puts "Not a number try again"
+      redo
+    end
+    puts question_select
+    currQuestion = questionsA.generate_question question_select
     
     # Check Response
     response = ($stdin.gets.chomp)
-    questionsA.verify(currplayer,response)
-    
-    status(player1, player2)
-    puts "Next Question"
-    questionsA.swap_turn(player1,player2)
+    if (response.to_i != 0)
+      questionsA.verify(currplayer,response) 
+      status(player1, player2)
+      puts "Next Question"
+      questionsA.swap_turn(player1,player2)
+    else
+      puts "Not a number try again"
+      redo
+    end
   end
+
   puts "#{currplayer.name} has lost, thanks for playing"
   exit(0)
 end
