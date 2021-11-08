@@ -26,6 +26,7 @@ def run_program
     response = ($stdin.gets.chomp)
     questionsA.verify(currplayer,response)
     puts "Next Question"
+    questionsA.swap_turn(player1,player2)
   end
   puts "#{currplayer.name} has lost, thanks for playing"
   exit(0)

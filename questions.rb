@@ -53,6 +53,7 @@ class Questions
   # and asks the question with key == to number
   def generate_question number
     puts QUESTIONS[number][0]
+    self.answer=(QUESTIONS[number][1])
   end
 
   # Method swap_turn takes in 2 instances of player
