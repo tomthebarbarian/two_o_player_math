@@ -34,13 +34,13 @@ class Questions
     @input
   end
 
-  attr_accessor 
-    :question
-    :answer
+  attr_accessor :question,
+    :answer,
     :input
 
   # method verify checks the response against the current answer
   def verify player, response
+    # puts answer
     if response == answer
       puts RESPONSE[0]
     else
@@ -52,7 +52,7 @@ class Questions
   # Method generate_question takes in an integer number from 1 to 20
   # and asks the question with key == to number
   def generate_question number
-    puts QUESTIONS[number]
+    puts QUESTIONS[number][0]
   end
 
   # Method swap_turn takes in 2 instances of player
