@@ -1,9 +1,9 @@
 class Player
-  initialize name
+  def initialize (name)
     @turn = false
     @lives = 3
     @name = name
-
+  end
   attr_accessor :turn, :lives, :name
 
   def turn_statement
@@ -13,6 +13,7 @@ class Player
   end
 
   def loselife
-    self.lives
-  end
+    self.lives=(lives - 1)
+
+  end 
 end

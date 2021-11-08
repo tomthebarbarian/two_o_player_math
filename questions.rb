@@ -28,11 +28,12 @@ class Questions
     'You are wrong'
   ]
 
-  initialize question_num
+  def initialize question_num
     @question = QUESTIONS[question_num][0]
     @answer = QUESTIONS[question_num][1]
     @response
     @input
+  end
   
   attr_accessor 
     :question
